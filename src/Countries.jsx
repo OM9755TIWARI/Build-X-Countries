@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import {uesState, useEffect} from "react";
+import React from "react";
+import {useState, useEffect} from "react";
 import axios from "axios";
 
 const Card = ({name, flag, abbr}) => {
@@ -18,7 +18,8 @@ const Card = ({name, flag, abbr}) => {
             textAlign: "center"
             
         }}>
-            <img src={flag} alt={abbr} height="100px" width="100px" />
+            <<img src={flag} alt={`Flag of ${name}`} height="100px" width="100px" />
+            />
             <h4>{name}</h4>
              </div>
     )
