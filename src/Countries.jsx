@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {uesState, useEffect} from "react";
 import axios from "axios";
 
-const Card = ({name, flag}) => {
+const Card = ({name, flag, abbr}) => {
     return(
         <div style={{
             display: "flex", 
@@ -18,7 +18,7 @@ const Card = ({name, flag}) => {
             textAlign: "center"
             
         }}>
-            <img src={flag} height="100px" width="100px" />
+            <img src={flag} alt={abbr} height="100px" width="100px" />
             <h4>{name}</h4>
              </div>
     )
@@ -45,7 +45,7 @@ const Countries = () => {
     return (
      
         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", padding: "10px"}}>
-        {countries.map(({name, flag}) => (<Card name = {name} flag = {flag} />))}
+        {countries.map(({name, flag, abbr}) => (<Card name = {name} flag = {flag} abbr = {abbr} />))}
         </div>
 
     )
