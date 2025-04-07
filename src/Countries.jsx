@@ -2,7 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import axios from "axios";
 
-const Card = ({name, flag, abbr}) => {
+const Card = ({name, flag}) => {
     return(
         <div style={{
             display: "flex", 
@@ -45,7 +45,7 @@ const Countries = () => {
     return (
      
         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", padding: "10px"}}>
-        {countries.map(({name, flag, abbr}) => (<Card name = {name} flag = {flag} abbr = {abbr} />))}
+        {countries.map(({name, flag, abbr}) => (<Card name = {name} flag = {flag} key = {abbr} />))}
         </div>
 
     )
