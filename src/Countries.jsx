@@ -18,7 +18,7 @@ const Card = ({name, flag}) => {
             textAlign: "center"
             
         }}>
-            <img src={flag} alt={name && flag} height="100px" width="100px" />
+            <img src={flag} alt={name || "Country Flag"} height="100px" width="100px" />
             <h4>{name}</h4>
              </div>
     )
