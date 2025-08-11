@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Countries from '../src/Countries.jsx';
+import State from './States';
 
 function App() {
   return (
     <div>
 
-      <Countries />
+      <State />
     </div>
   );
 }
